@@ -1,0 +1,19 @@
+server:
+  name: basic-structure
+  version: 1.0.0
+  http:
+    addr: 0.0.0.0:8100
+    timeout: 1s
+data:
+  database:
+    driver: mysql
+    source: username:123456@tcp(0.0.0.0:3306)/database?parseTime=True&loc=Local
+    conn-max-lifetime: 100
+    max-idle-conns: 1
+    max-open-conns: 5
+  redis:
+    addr: 127.0.0.1:6379
+    password:
+    db: 0
+    read_timeout: 200
+    write_timeout: 200
